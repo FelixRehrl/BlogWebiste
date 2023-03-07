@@ -1,0 +1,24 @@
+
+<%- include("partials/header") %>
+
+<h1><b>Compose</b></h1>
+
+
+<!-- Post Request are always inside of a form  -->
+<form class="" action="/compose" method="post">
+
+  <!-- In app.js we have to tap in the 'name' attribute of the input -->
+  <div class="form-group">
+    <label>Title</label>
+    <input type="text" class = "form-control" name="inputTitle" value="">
+    <label>Post</label>
+    <textarea name="inputCompose" class = "form-control" rows="4" cols="80"></textarea>
+    <!-- The button triggers the post-request -->
+  </div>
+
+  <button type="submit" class = "btn btn-large btn-primary compose-button" name="submit_button">Publish</button>
+
+
+</form>
+
+<%- include("partials/footer")%>

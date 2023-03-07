@@ -1,0 +1,25 @@
+
+ <%- include('partials/header') -%>
+
+
+ <h1>Home</h1>
+
+
+
+
+ <% posts.forEach( (post, i) => { %>
+
+  <% let postContent = post.text; %>
+  <% postContent = postContent.substring(0, 100); %>
+
+  <h1> <%= post.name %> </h1>
+  <!-- Una Cosa che può molto spesso semplificare la vita: sovracaricare gli elementi HTML invece di cambiare gli style indiviuali  -->
+  <p>  <%= postContent + " ..." %> <a href = "/posts/<%= post.name %>"> Read more </a>  </p>
+
+
+
+ <% });  %>
+
+
+
+ <%- include('partials/footer') -%>
